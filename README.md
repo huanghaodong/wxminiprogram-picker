@@ -82,7 +82,7 @@
  
  ```
  
- -  scrollType='link'时，listData数据结构代码如下；'用于显示的key'对应keyWordsOfShow属性。若要设置默认选中，设置 defaultPickData = [{第一列选中项对应的唯一key:value}, {第二列选中项对应的唯一key:value}, {第三列选中项对应的唯一key:value},...]，如[{id:2},{id:21},{id:213}]
+ -  scrollType='link'时，listData数据结构代码如下，"children"字段为必须；'用于显示的key'对应keyWordsOfShow属性。若要设置默认选中，设置 defaultPickData = [{第一列选中项对应的唯一key:value}, {第二列选中项对应的唯一key:value}, {第三列选中项对应的唯一key:value},...]，如[{id:2},{id:21},{id:213}]
 
 ```js
 //listData数据结构
