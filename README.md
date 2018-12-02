@@ -56,8 +56,8 @@
 | indicatorStyle | String | ✗ | '' | 设置选择器中间选中框的样式（详见[picker-view](https://developers.weixin.qq.com/miniprogram/dev/component/picker-view.html)）如，每一行的高度 view |
 | maskStyle | String | ✗ | '' | 设置蒙层的样式（详见[picker-view](https://developers.weixin.qq.com/miniprogram/dev/component/picker-view.html)） view |
 | titleStyle | String | ✗ | '' | 标题栏标题样式  view |
-| sureStyle | String | ✗ | '' | 标题栏确定样式  view |
-| cancelStyle | String | ✗ | '' | 标题栏取消样式 view |
+| sureStyle | String | ✗ | '' | 标题栏确定样式  text |
+| cancelStyle | String | ✗ | '' | 标题栏取消样式 text |
 | chooseItemTextStyle | Array | ✗ | '' | 设置picker列表文案样式 text |
 | pickerHeaderStyle | String | ✗ | '' | 标题栏样式 view |
 | titleText | String | ✗ | '' | 标题文案 |

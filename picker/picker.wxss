@@ -44,13 +44,13 @@
 	border-bottom: 1px solid #eeeeee;
 }
 .picker-header view {
+	height: 100%;
 	display: flex;
-	box-sizing: border-box;
-	font-size: 36rpx;
 	justify-content: center;
 	align-items: center;
-	height: 50rpx;
-	width: 100rpx;
+}
+.picker-header view text{
+	font-size: 36rpx;
 }
 .picker-content {
 	flex-grow: 1;

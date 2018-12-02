@@ -113,8 +113,8 @@ Component({
       value: "确定"
     },
     pickerHeaderStyle: String,//标题栏样式 view
-    sureStyle: String, //标题栏确定样式  view
-    cancelStyle: String,//标题栏取消样式 view
+    sureStyle: String, //标题栏确定样式  text
+    cancelStyle: String,//标题栏取消样式 text
     titleStyle: String,//标题栏标题样式  view
     maskStyle: String,//设置蒙层的样式（详见picker-view） view
     indicatorStyle: String,//设置选择器中间选中框的样式（详见picker-view） view
