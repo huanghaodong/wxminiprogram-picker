@@ -224,11 +224,11 @@ Component({
       })
       timing = setTimeout(()=>{
         animationModal = wx.createAnimation({
-          duration: 500,
+          duration: 400,
           timingFunction: 'ease',
         })
         animationPicker= wx.createAnimation({
-          duration: 500,
+          duration: 400,
           timingFunction: 'ease',
         })
         animationModal.opacity(.4).step()
@@ -251,7 +251,7 @@ Component({
           isOpen: false
         })
         clearTimeout(timing)
-      },500)
+      },400)
     },
     _getColumnData (arr) {
       return arr.map((v) => this._fomateObj(v))

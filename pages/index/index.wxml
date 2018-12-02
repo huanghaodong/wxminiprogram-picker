@@ -3,18 +3,18 @@
 <view>选择数据：{{picker_01_data}}</view>
 <picker
 	isShowPicker="{{isShow_01}}"
-	bind:sure="sureCallBack_01"
-	bind:cancle="cancleCallBack_01"
+	bindsure="sureCallBack_01"
+	bindcancle="cancleCallBack_01"
 	scrollType="normal"
 	listData="{{listData_01}}"
 ></picker>
-	
+
 <button bindtap="showPicker_02">单列非联动picker（自定义样式）</button>
 <view>选择数据：{{picker_02_data}}</view>
 <picker
 	isShowPicker="{{isShow_02}}"
-	bind:sure="sureCallBack_02"
-	bind:cancle="cancleCallBack_02"
+	bindsure="sureCallBack_02"
+	bindcancle="cancleCallBack_02"
 	scrollType="normal"
 	listData="{{listData_02}}"
 	indicatorStyle="height:80px"
@@ -28,13 +28,13 @@
 	cancelText="cancle"
 	sureText="sure"
 ></picker>
-	
+
 <button bindtap="showPicker_03">多列非联动picker</button>
 <view>选择数据：{{picker_03_data}}</view>
 <picker
 	isShowPicker="{{isShow_03}}"
-	bind:sure="sureCallBack_03"
-	bind:cancle="cancleCallBack_03"
+	bindsure="sureCallBack_03"
+	bindcancle="cancleCallBack_03"
 	scrollType="normal"
 	listData="{{listData_03}}"
 ></picker>
@@ -44,8 +44,8 @@
 <picker
 	isShowPicker="{{isShow_04}}"
 	keyWordsOfShow="str"
-	bind:sure="sureCallBack_04"
-	bind:cancle="cancleCallBack_04"
+	bindsure="sureCallBack_04"
+	bindcancle="cancleCallBack_04"
 	scrollType="normal"
 	listData="{{listData_04}}"
 ></picker>
@@ -56,8 +56,8 @@
 	isShowPicker="{{isShow_05}}"
 	keyWordsOfShow="str"
 	defaultPickData="{{defaultPickData_05}}"
-	bind:sure="sureCallBack_05"
-	bind:cancle="cancleCallBack_05"
+	bindsure="sureCallBack_05"
+	bindcancle="cancleCallBack_05"
 	scrollType="normal"
 	listData="{{listData_05}}"
 ></picker>
@@ -67,8 +67,8 @@
 <picker
 	isShowPicker="{{isShow_06}}"
 	keyWordsOfShow="name"
-	bind:sure="sureCallBack_06"
-	bind:cancle="cancleCallBack_06"
+	bindsure="sureCallBack_06"
+	bindcancle="cancleCallBack_06"
 	scrollType="link"
 	listData="{{listData_06}}"
 ></picker>
@@ -79,8 +79,8 @@
 	isShowPicker="{{isShow_07}}"
 	keyWordsOfShow="name"
 	defaultPickData="{{defaultPickData_07}}"
-	bind:sure="sureCallBack_07"
-	bind:cancle="cancleCallBack_07"
+	bindsure="sureCallBack_07"
+	bindcancle="cancleCallBack_07"
 	scrollType="link"
 	listData="{{listData_07}}"
 ></picker>
@@ -90,8 +90,8 @@
 <picker
 	isShowPicker="{{isShow_08}}"
 	keyWordsOfShow="name"
-	bind:sure="sureCallBack_08"
-	bind:cancle="cancleCallBack_08"
+	bindsure="sureCallBack_08"
+	bindcancle="cancleCallBack_08"
 	scrollType="link"
 	listData="{{listData_08}}"
 ></picker>
