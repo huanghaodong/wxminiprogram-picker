@@ -1,0 +1,63 @@
+/* picker/picker.wxss */
+.full-box{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: 999;
+}
+
+.modal{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: #000;
+	opacity: 0;
+}
+
+.picker{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	bottom:-50%;
+	left: 0;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+}
+
+.picker-line{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.picker-header {
+	height: 20%;
+	box-sizing: border-box;
+	padding: 0 20rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #eeeeee;
+}
+.picker-header view {
+	display: flex;
+	box-sizing: border-box;
+	font-size: 36rpx;
+	justify-content: center;
+	align-items: center;
+	height: 50rpx;
+	width: 100rpx;
+}
+.picker-content {
+	flex-grow: 1;
+}
+.line1{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	lines:1
+}
