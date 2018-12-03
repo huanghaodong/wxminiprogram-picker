@@ -1,5 +1,4 @@
 <!--pages/index/index.wxml-->
-<input type="text"/>
 <button bindtap="showPicker_01">单列非联动picker</button>
 <view>选择数据：{{picker_01_data}}</view>
 <picker

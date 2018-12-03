@@ -68,6 +68,7 @@
 
 
 ##### 注意
+ - 模态框无法覆盖原生组件（参考[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)），所以如果页面有原生组件，可以在isShowPicker为true禁用原生组件的事件。
  - 必须在bindsure和bindcancle中将isShowPicker设为false。
  - scrollType='normal'时，listData数据结构代码如下；当第二维数组的成员为对象时，需指定用于显示的key(通过keyWordsOfShow属性)，默认为'name'。若要设置默认选中，设置 defaultPickData=[第一选中的列索引,第二选中的列索引,第三选中的列索引,...]，如[1,2,1]
  
