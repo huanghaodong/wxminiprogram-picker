@@ -5,18 +5,17 @@
 	right: 0;
 	bottom: 0;
 	top: 0;
-	z-index: 999;
+	z-index: 9999;
+	opacity: 0;
+	background:rgba(0,0,0,.4);
+	transition:all .4s ease-in-out 0;
+	pointer-events:none;
+}
+.full-box.cur{
+	opacity:1;
+	pointer-events:auto
 }
 
-.modal{
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 0;
-	background: #000;
-	opacity: 0;
-}
 
 .picker{
 	position: absolute;
@@ -27,8 +26,12 @@
 	background: #fff;
 	display: flex;
 	flex-direction: column;
+	transition:all .4s ease-in-out 0;
 }
 
+.cur .picker{
+	bottom:0;
+}
 .picker-line{
 	display: flex;
 	justify-content: center;

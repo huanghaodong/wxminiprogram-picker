@@ -1,7 +1,6 @@
 <!--picker/picker.wxml-->
-<view wx:if="{{isOpen}}" class="full-box">
-	<view  animation="{{animationModal}}" class="modal" bindtap="clickModal"></view>
-	<view class="picker" animation="{{animationPicker}}" >
+<view class="full-box {{isOpen?'cur':''}}" bindtap="clickModal">
+	<view class="picker">
 		<view class="picker-header" style="{{pickerHeaderStyle}}">
 			<view bindtap="cancle" >
 				<text style="{{cancelStyle}}">{{cancelText}}</text>

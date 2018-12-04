@@ -1,9 +1,6 @@
 // picker/picker.js
 import { isString,isPlainObject } from './tool';
 
-let animationModal = {};
-let animationPicker = {};
-let timing = null;
 let deviceW = 0;
 let deviceH = 0;
 let scrollEnd = true;//滚动是否结束
@@ -222,36 +219,12 @@ Component({
       this.setData({
         isOpen: true
       })
-      timing = setTimeout(()=>{
-        animationModal = wx.createAnimation({
-          duration: 400,
-          timingFunction: 'ease',
-        })
-        animationPicker= wx.createAnimation({
-          duration: 400,
-          timingFunction: 'ease',
-        })
-        animationModal.opacity(.4).step()
-        animationPicker.bottom(0).step()
-        this.setData({
-          animationModal: animationModal.export(),
-          animationPicker: animationPicker.export()
-        })
-      },10)
+
     },
     _closePicker () {
-      animationModal.opacity(.0).step()
-      animationPicker.bottom(-deviceH/2).step()
-      this.setData({
-        animationModal: animationModal.export(),
-        animationPicker: animationPicker.export()
-      })
-      timing = setTimeout(()=>{
-        this.setData({
-          isOpen: false
-        })
-        clearTimeout(timing)
-      },400)
+     this.setData({
+       isOpen: false
+     })
     },
     _getColumnData (arr) {
       return arr.map((v) => this._fomateObj(v))
