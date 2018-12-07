@@ -142,10 +142,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    clickModal () {
-      this._closePicker();
-      this.properties.isShowPicker = false;
-    },
     cancle () {
       let {backData} = this.data
       this.triggerEvent('cancle')
