@@ -136,16 +136,28 @@ Component({
               val[compareIndex+tempI] = 0;
               tempI++;
             }
-            lastValue = val.concat();
-
           }
+          val = this._validate(val);
+          lastValue = val.concat();
           tempValue = val.concat();
           this.setData({
             columnsData,
-            value: val
+            // value: val
           })
       }
 
+    },
+    _validate (val) {
+      let { columnsData } = this.data;
+      columnsData.forEach((v, i) => {
+        if(columnsData[i].length - 1 < val[i]){
+          val[i] = columnsData[i].length - 1;
+        }
+      })
+      this.setData({
+        value: val
+      })
+      return val;
     },
     _bindpickend(){
       scrollEnd = true;
