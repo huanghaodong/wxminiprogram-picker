@@ -16,6 +16,15 @@
 	pointer-events:auto
 }
 
+.modal{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	bottom:-50%;
+	left: 0;
+	background: transparent;
+	transition:all .4s ease-in-out 0;
+}
 
 .picker{
 	position: absolute;
@@ -31,6 +40,9 @@
 
 .cur .picker{
 	bottom:0;
+}
+.cur .modal{
+	bottom:50%;
 }
 .picker-line{
 	display: flex;

@@ -1,5 +1,6 @@
 <!--picker/picker.wxml-->
 <view class="full-box {{isOpen?'cur':''}}">
+	<view class="modal" bindtap="tapModal"></view>
 	<view class="picker">
 		<view class="picker-header" style="{{pickerHeaderStyle}}">
 			<view bindtap="cancle" >
