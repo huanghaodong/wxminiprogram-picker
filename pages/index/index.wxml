@@ -21,7 +21,6 @@
 	scrollType="normal"
 	listData="{{listData_02}}"
 	indicatorStyle="height:80px"
-	pickerHeight="470rpx"
 	maskStyle=""
 	titleStyle=""
 	sureStyle="color:blue;font-size:16px;"
