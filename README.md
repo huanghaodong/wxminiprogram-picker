@@ -63,7 +63,7 @@
 | titleText | String | ✗ | '' | 标题文案 |
 | cancelText | String | ✗ | '' | 取消按钮文案 |
 | sureText | String | ✗ | '' | 确定按钮文案 |
-| bindsure | EventHandle | ✗ | 无 | 点击确定触发的事件，event.detail = value |
+| bindsure | EventHandle | ✗ | 无 | 点击确定触发的事件，event.detail = {choosedData, choosedIndexArr} ,choosedData为选中项的数据, choosedIndexArr为选中项的索引数组；当scrollType='link'时choosedIndexArr无意义。|
 | bindcancle | EventHandle | ✗ | 无 | 点击取消触发的事件 |
 
 

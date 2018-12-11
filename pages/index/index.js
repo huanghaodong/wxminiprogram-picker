@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    temp:[],
     isShow_01: false,
     listData_01:[['太阳', '月亮', '星星']],
     picker_01_data:[],
@@ -235,6 +236,17 @@ Page({
     listData_08:citys,
     picker_08_data:[],
   },
+  onLoad () {
+    setTimeout(() => {
+      this.setData({
+        temp:[
+          [{type:'性别',id:0,str:'男'}, {type:'性别',id:1,str:'女'}],
+          [{type:'婚姻状况',id:0,str:'已婚'},{type:'婚姻状况',id:0,str:'未婚'}],
+          [{type:'职业状态',id:0,str:'在职'},{type:'婚姻状况',id:0,str:'离职'}]
+        ],
+      })
+    },3000)
+  },
   showPicker_01: function () {
     this.setData({
       isShow_01: true
@@ -244,7 +256,8 @@ Page({
     let data = e.detail
     this.setData({
       isShow_01: false,
-      picker_01_data: e.detail
+      picker_01_data: e.detail.choosedData,
+      picker_01_index:JSON.stringify(e.detail.choosedIndexArr)
     })
   },
   cancleCallBack_01 () {
@@ -263,7 +276,8 @@ Page({
     let data = e.detail
     this.setData({
       isShow_02: false,
-      picker_02_data: e.detail
+      picker_02_data: e.detail.choosedData,
+      picker_02_index:JSON.stringify(e.detail.choosedIndexArr)
     })
   },
   cancleCallBack_02 () {
@@ -282,7 +296,8 @@ Page({
     let data = e.detail
     this.setData({
       isShow_03: false,
-      picker_03_data: e.detail
+      picker_03_data: e.detail.choosedData,
+      picker_03_index:JSON.stringify(e.detail.choosedIndexArr)
     })
   },
   cancleCallBack_03 () {
@@ -301,7 +316,8 @@ Page({
     let data = e.detail
     this.setData({
       isShow_04: false,
-      picker_04_data: JSON.stringify(e.detail)
+      picker_04_data: JSON.stringify(e.detail.choosedData),
+      picker_04_index:JSON.stringify(e.detail.choosedIndexArr)
     })
   },
   cancleCallBack_04 () {
@@ -320,7 +336,9 @@ Page({
     let data = e.detail
     this.setData({
       isShow_05: false,
-      picker_05_data: JSON.stringify(e.detail)
+      picker_05_data: JSON.stringify(e.detail.choosedData),
+      picker_05_index:JSON.stringify(e.detail.choosedIndexArr)
+
     })
   },
   cancleCallBack_05 () {
@@ -339,7 +357,9 @@ Page({
     let data = e.detail
     this.setData({
       isShow_06: false,
-      picker_06_data: JSON.stringify(e.detail)
+      picker_06_data: JSON.stringify(e.detail.choosedData),
+      picker_06_index:JSON.stringify(e.detail.choosedIndexArr)
+
     })
   },
   cancleCallBack_06 () {
@@ -357,7 +377,9 @@ Page({
   sureCallBack_07 (e) {
     this.setData({
       isShow_07: false,
-      picker_07_data: JSON.stringify(e.detail)
+      picker_07_data: JSON.stringify(e.detail.choosedData),
+      picker_07_index:JSON.stringify(e.detail.choosedIndexArr)
+
     })
   },
   cancleCallBack_07 () {
@@ -375,7 +397,9 @@ Page({
   sureCallBack_08 (e) {
     this.setData({
       isShow_08: false,
-      picker_08_data: JSON.stringify(e.detail)
+      picker_08_data: JSON.stringify(e.detail.choosedData),
+      picker_08_index:JSON.stringify(e.detail.choosedIndexArr)
+
     })
   },
   cancleCallBack_08 () {

@@ -1,6 +1,7 @@
 <!--pages/index/index.wxml-->
 <button bindtap="showPicker_01">单列非联动picker</button>
 <view>选择数据：{{picker_01_data}}</view>
+<view>选择索引：{{picker_01_index}}</view>
 <picker
 	isShowPicker="{{isShow_01}}"
 	bindsure="sureCallBack_01"
@@ -11,6 +12,7 @@
 
 <button bindtap="showPicker_02">单列非联动picker（自定义样式）</button>
 <view>选择数据：{{picker_02_data}}</view>
+<view>选择索引：{{picker_02_index}}</view>
 <picker
 	isShowPicker="{{isShow_02}}"
 	bindsure="sureCallBack_02"
@@ -31,6 +33,7 @@
 
 <button bindtap="showPicker_03">多列非联动picker</button>
 <view>选择数据：{{picker_03_data}}</view>
+<view>选择索引：{{picker_03_index}}</view>
 <picker
 	isShowPicker="{{isShow_03}}"
 	bindsure="sureCallBack_03"
@@ -41,6 +44,7 @@
 
 <button bindtap="showPicker_04">多列非联动picker 返回对象数组</button>
 <view>选择数据：{{picker_04_data}}</view>
+<view>选择索引：{{picker_04_index}}</view>
 <picker
 	isShowPicker="{{isShow_04}}"
 	keyWordsOfShow="str"
@@ -52,6 +56,7 @@
 
 <button bindtap="showPicker_05">多列非联动picker 设置默认选择</button>
 <view>选择数据：{{picker_05_data}}</view>
+<view>选择索引：{{picker_05_index}}</view>
 <picker
 	isShowPicker="{{isShow_05}}"
 	keyWordsOfShow="str"
@@ -64,6 +69,7 @@
 
 <button bindtap="showPicker_06">多列联动picker</button>
 <view>选择数据：{{picker_06_data}}</view>
+<view>选择索引：{{picker_06_index}}</view>
 <picker
 	isShowPicker="{{isShow_06}}"
 	keyWordsOfShow="name"
@@ -75,6 +81,7 @@
 
 <button bindtap="showPicker_07">多列联动picker  设置默认选择</button>
 <view>选择数据：{{picker_07_data}}</view>
+<view>选择索引：{{picker_07_index}}</view>
 <picker
 	isShowPicker="{{isShow_07}}"
 	keyWordsOfShow="name"
@@ -87,6 +94,7 @@
 
 <button bindtap="showPicker_08">省市区三级联动</button>
 <view>选择数据：{{picker_08_data}}</view>
+<view>选择索引：{{picker_08_index}}</view>
 <picker
 	isShowPicker="{{isShow_08}}"
 	keyWordsOfShow="name"

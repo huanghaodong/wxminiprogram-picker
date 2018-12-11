@@ -2,11 +2,7 @@
 import { isString,isPlainObject } from './tool';
 
 
-let scrollEnd = true;//滚动是否结束
-let lastValue = [0, 0, 0];//上次各个colum的选择索引
-let tempValue = [0, 0, 0];
-let  isFirstOpen = true;
-let onlyKey = '';
+
 Component({
   /**
    * 组件的属性列表
@@ -21,6 +17,9 @@ Component({
       value: [],
       observer: function(newVal) {
         let {defaultPickData} = this.properties;
+        if(newVal.length === 0) return;
+        let tempArr = [...new Array(newVal.length).keys()].map(() => 0)
+        this.data.lastValue = this.data.tempValue =tempArr;
         this._setDefault(newVal, defaultPickData)
       }
     },
@@ -74,14 +73,12 @@ Component({
     animationModal: {},
     animationPicker: {},
     isOpen: false,
-    isUseKeywordOfShow: false
-  },
-  detached: function() {
-    scrollEnd = true;//滚动是否结束
-    lastValue = [0, 0, 0];//上次各个colum的选择索引
-    tempValue = [0, 0, 0];
-    isFirstOpen = true;
-    onlyKey = '';
+    isUseKeywordOfShow: false,
+    scrollEnd : true,//滚动是否结束
+    lastValue : [],//上次各个colum的选择索引
+    tempValue : [],
+    isFirstOpen : true,
+    onlyKey : ''
   },
   /**
    * 组件的方法列表
@@ -92,27 +89,31 @@ Component({
       this._closePicker()
     },
     cancle () {
-      let {backData} = this.data
       this.triggerEvent('cancle')
       this._closePicker()
     },
     sure () {
+      let { scrollEnd, tempValue} = this.data;
       if(!scrollEnd) return;
       let backData = this._getBackDataFromValue(tempValue);
       this.setData({
         backData
       })
-      this.triggerEvent('sure', backData)
+      this.triggerEvent('sure', {
+        choosedData:backData,
+        choosedIndexArr:tempValue
+      })
       this._closePicker()
     },
     _bindChange (e) {
       let {scrollType} = this.properties;
+      let { lastValue } = this.data;
       let val = e.detail.value;
       let backData = [];
       switch (scrollType) {
         case "normal":
-          tempValue = val.concat();
-          lastValue = val.concat();
+          this.data.tempValue = val.concat();
+          this.data.tempValue = val.concat();
           break;
         case "link":
            //let column_02 = this._getColumnData(this.properties.listData[val[0]].children);
@@ -138,8 +139,8 @@ Component({
             }
           }
           val = this._validate(val);
-          lastValue = val.concat();
-          tempValue = val.concat();
+          this.data.lastValue = val.concat();
+          this.data.tempValue = val.concat();
           this.setData({
             columnsData,
             // value: val
@@ -160,16 +161,18 @@ Component({
       return val;
     },
     _bindpickend(){
-      scrollEnd = true;
+      this.data.scrollEnd = true;
     },
     _bindpickstart(){
-      scrollEnd = false;
+      this.data.scrollEnd = false;
     },
     _openPicker () {
-      if(!isFirstOpen){
-        this._setDefault(this.properties.listData, this._computedBackData(this.data.backData))
+      if(!this.data.isFirstOpen){
+        if(this.properties.listData.length !== 0){
+          this._setDefault(this.properties.listData, this._computedBackData(this.data.backData))
+        }
       }
-      isFirstOpen = false;
+      this.data.isFirstOpen = false;
       this.setData({
         isOpen: true
       })
@@ -214,6 +217,7 @@ Component({
     _setDefault (listData, defaultPickData) {
 
       let {scrollType} = this.properties;
+      let { lastValue, tempValue, onlyKey } = this.data;
       let backData = [];
       switch (scrollType) {
         case "normal":
@@ -224,11 +228,11 @@ Component({
           }
           if(Array.isArray(defaultPickData) && defaultPickData.length>0){
             backData = listData.map((v, i) => v[defaultPickData[i]]);
+            this.data.tempValue = defaultPickData;
+            this.data.lastValue = defaultPickData;
           }else{
             backData = listData.map((v) => v[0]);
           }
-          tempValue = defaultPickData;
-          lastValue = defaultPickData;
           this.setData({
             columnsData: listData,
             backData: backData,
@@ -257,7 +261,7 @@ Component({
             backData = columnsData.map((v, i) => v[defaultPickData[i]]);
             //如果没有默认值
           }else{
-            onlyKey = this.properties.keyWordsOfShow||'name';
+            this.data.onlyKey = this.properties.keyWordsOfShow||'name';
             do{
               lastValue.push(0);
               columnsData.push(this._getColumnData(listData))
@@ -265,8 +269,8 @@ Component({
             }while (listData)
             backData = columnsData.map((v) => v[0]);
           }
-          tempValue = defaultPickData;
-          lastValue = defaultPickData;
+          this.data.tempValue = defaultPickData;
+          this.data.lastValue = defaultPickData;
           this.setData({
             isUseKeywordOfShow: true,
             columnsData,
@@ -282,6 +286,7 @@ Component({
     },
     _computedBackData(backData) {
       let {scrollType, listData} = this.properties;
+      let { onlyKey } = this.data;
       if(scrollType === 'normal'){
         return backData.map((v, i) => listData[i].findIndex((vv, ii) => this._compareObj(v, vv)))
       }else{
