@@ -1,12 +1,12 @@
 <!--picker/picker.wxml-->
 <view class="full-box {{isOpen?'cur':''}}">
-	<view class="modal" bindtap="tapModal"></view>
+	<!--<view class="modal" bindtap="tapModal"></view>-->
 	<view class="picker">
 		<view class="picker-header" style="{{pickerHeaderStyle}}">
 			<view bindtap="cancle" >
 				<text style="{{cancelStyle}}">{{cancelText}}</text>
 			</view>
-			<text style="{{titleStyle}}">{{titleText}}</text>
+			<text style="{{titleStyle}}">{{pickerHeight}}</text>
 			<view bindtap="sure">
 				<text  style="{{sureStyle}}">{{sureText}}</text>
 			</view>

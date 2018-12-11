@@ -29,8 +29,8 @@
 .picker{
 	position: absolute;
 	width: 100%;
-	height: 50%;
-	bottom:-50%;
+	height: 235px;
+	bottom: -235px;
 	left: 0;
 	background: #fff;
 	display: flex;

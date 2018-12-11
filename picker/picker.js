@@ -70,8 +70,7 @@ Component({
     columnsData:[],
     value:[],
     backData:[],
-    animationModal: {},
-    animationPicker: {},
+    height:0,
     isOpen: false,
     isUseKeywordOfShow: false,
     scrollEnd : true,//滚动是否结束
