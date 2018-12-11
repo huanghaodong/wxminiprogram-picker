@@ -16,16 +16,26 @@ Component({
       type: Array,
       value: [],
       observer: function(newVal) {
-        let {defaultPickData} = this.properties;
-        if(newVal.length === 0) return;
+        if (newVal.length === 0 || this._compareDate()) return;
+        this._setTempData();
         let tempArr = [...new Array(newVal.length).keys()].map(() => 0)
         this.data.lastValue = this.data.tempValue =tempArr;
-        this._setDefault(newVal, defaultPickData)
+        this._setDefault()
+
+        // let {defaultPickData} = this.properties;
+        // if(newVal.length === 0) return;
+        //
+        // this._setDefault(newVal, defaultPickData)
       }
     },
     defaultPickData:{
       type: Array,
-      value: []
+      value: [],
+      observer: function (newVal) {
+        if (newVal.length === 0 || this._compareDate()) return;
+        this._setTempData();
+        this._setDefault()
+      }
     },
     keyWordsOfShow:{
       type: String,
@@ -77,7 +87,9 @@ Component({
     lastValue : [],//上次各个colum的选择索引
     tempValue : [],
     isFirstOpen : true,
-    onlyKey : ''
+    onlyKey : '',
+    defaultPickDataTemp: '',
+    listDataTemp: ''
   },
   /**
    * 组件的方法列表
@@ -168,7 +180,7 @@ Component({
     _openPicker () {
       if(!this.data.isFirstOpen){
         if(this.properties.listData.length !== 0){
-          this._setDefault(this.properties.listData, this._computedBackData(this.data.backData))
+          this._setDefault(this._computedBackData(this.data.backData))
         }
       }
       this.data.isFirstOpen = false;
@@ -213,10 +225,12 @@ Component({
       }
 
     },
-    _setDefault (listData, defaultPickData) {
-
-      let {scrollType} = this.properties;
+    _setDefault (inBackData) {
+      let {listData,defaultPickData,scrollType} = this.properties;
       let { lastValue, tempValue, onlyKey } = this.data;
+      if(inBackData){
+        defaultPickData = inBackData;
+      }
       let backData = [];
       switch (scrollType) {
         case "normal":
@@ -315,5 +329,16 @@ Component({
       }
       return tempArr
     },
+    _compareDate () { //完全相等返回true
+      let {defaultPickDataTemp, listDataTemp} = this.data;
+      let {defaultPickData, listData}  = this.properties
+
+      return defaultPickDataTemp === defaultPickData && listDataTemp === listData
+    },
+    _setTempData () {
+      let {defaultPickData, listData}  = this.properties;
+      this.data.defaultPickDataTemp = defaultPickData;
+      this.data.listDataTemp = listData;
+    }
   }
 })
