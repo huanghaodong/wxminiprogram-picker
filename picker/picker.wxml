@@ -6,7 +6,7 @@
 			<view bindtap="cancle" >
 				<text style="{{cancelStyle}}">{{cancelText}}</text>
 			</view>
-			<text style="{{titleStyle}}">{{pickerHeight}}</text>
+			<text style="{{titleStyle}}">{{titleText}}</text>
 			<view bindtap="sure">
 				<text  style="{{sureStyle}}">{{sureText}}</text>
 			</view>
