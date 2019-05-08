@@ -234,7 +234,7 @@ Page({
 
     isShow_08: false,
     defaultPickData_08:[
-      {code:'500000'},{code:'500000'},{code:'500243'}
+      {code:'500000'},{code:'500200'},{code:'500243'}
     ],
     listData_08:citys,
     picker_08_data:[],
