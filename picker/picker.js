@@ -227,8 +227,10 @@ Component({
     },
     _setDefault (inBackData) {
       let {listData,defaultPickData,scrollType} = this.properties;
+
       let { lastValue, tempValue, onlyKey } = this.data;
       if(inBackData){
+
         defaultPickData = inBackData;
       }
       let backData = [];
@@ -260,9 +262,13 @@ Component({
           let columnsData = [];
           //如果默认值
           if(Array.isArray(defaultPickData) && defaultPickData.length>0 && defaultPickData.every((v, i) => isPlainObject(v))){
-            let key = onlyKey = Object.keys(defaultPickData[0])[0];
+
+            let key = this.data.onlyKey = Object.keys(defaultPickData[0])[0];
+
             let arr = [];
+
             this._getIndexByIdOfObject(listData, defaultPickData, key, arr);
+
             defaultPickData = arr;
             let tempI = 0;
             do{
@@ -303,11 +309,13 @@ Component({
       if(scrollType === 'normal'){
         return backData.map((v, i) => listData[i].findIndex((vv, ii) => this._compareObj(v, vv)))
       }else{
-        return backData.map((v, i) => {
+        let t = backData.map((v, i) => {
           let o = {};
           o[onlyKey] = v[onlyKey]
           return o;
         })
+
+        return t
       }
     },
     _compareObj (o1, o2) {

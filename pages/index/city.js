@@ -9357,7 +9357,10 @@ const citys = [
           "name":"东莞市",
           "children":
             [
-
+              {
+                "code":"441900",
+                "name":"东莞市"
+              }
             ]
 
         },
@@ -9366,7 +9369,10 @@ const citys = [
           "name":"中山市",
           "children":
             [
-
+              {
+                "code":"442000",
+                "name":"中山市"
+              }
             ]
 
         },
@@ -10092,7 +10098,10 @@ const citys = [
           "name":"三沙市",
           "children":
             [
-
+              {
+                "code":"460300",
+                "name":"三沙市"
+              }
             ]
 
         },
@@ -10101,7 +10110,10 @@ const citys = [
           "name":"儋州市",
           "children":
             [
-
+              {
+                "code":"460400",
+                "name":"儋州市"
+              }
             ]
 
         }
@@ -13266,7 +13278,10 @@ const citys = [
           "name":"嘉峪关市",
           "children":
             [
-
+              {
+                "code":"620200",
+                "name":"嘉峪关市"
+              }
             ]
 
         },

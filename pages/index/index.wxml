@@ -99,6 +99,7 @@
 <picker
 	isShowPicker="{{isShow_08}}"
 	keyWordsOfShow="name"
+	defaultPickData="{{defaultPickData_08}}"
 	bindsure="sureCallBack_08"
 	bindcancle="cancleCallBack_08"
 	scrollType="link"
