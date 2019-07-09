@@ -1,4 +1,4 @@
-![avatar](http://thyrsi.com/t6/622/1543727025x2890209128.gif)
+![avatar](http://www.kupan123.com/upload/1562661956x-558705050.gif)
 ## 为什么要自定义picker
 原生小程序picker不支持自定义样式，无联动。
 该自定组件
