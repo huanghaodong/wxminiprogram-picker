@@ -242,11 +242,9 @@ Page({
   onLoad () {
     setTimeout(() => {
       this.setData({
-        temp:[
-          [{type:'性别',id:0,str:'男'}, {type:'性别',id:1,str:'女'}],
-          [{type:'婚姻状况',id:0,str:'已婚'},{type:'婚姻状况',id:0,str:'未婚'}],
-          [{type:'职业状态',id:0,str:'在职'},{type:'婚姻状况',id:0,str:'离职'}]
-        ],
+        defaultPickData_08:[
+          {code:'110000'},{code:'110100'},{code:'110101'}
+        ]
       })
     },3000)
   },
