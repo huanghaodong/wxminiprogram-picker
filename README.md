@@ -1,4 +1,4 @@
-![avatar](http://chuantu.xyz/t6/702/1570502915x1033347913.gif)
+![avatar](http://upload-images.jianshu.io/upload_images/12063255-ed58d98366b12a06.gif?imageMogr2/auto-orient/strip)
 ## 为什么要自定义picker
 原生小程序picker不支持自定义样式，无联动。
 该自定组件
