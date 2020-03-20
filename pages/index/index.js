@@ -271,6 +271,229 @@ Page({
       }
     ],
     picker_09_data:[],
+
+    isShow_10: false,
+    listData_10:[
+      {
+        name:'动物',
+        id:1,
+        children:[
+          {
+            name:'鱼',
+            id:11,
+            children:[
+              {
+                name:'草鱼',
+                id:111,
+                children:[
+                  {
+                    name:'小',
+                    id:1111,
+                  },
+                  {
+                    name:'大',
+                    id:1112
+                  },
+                ]
+              },
+              {
+                name:'鲫鱼',
+                id:112,
+                children:[
+                  {
+                    name:'小',
+                    id:1121,
+                  },
+                  {
+                    name:'大',
+                    id:1122
+                  },
+                ]
+              },
+              {
+                name:'鲢鱼',
+                id:113,
+                children:[
+                  {
+                    name:'小',
+                    id:1131,
+                  },
+                  {
+                    name:'大',
+                    id:1132
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            name:'蛇',
+            id:12,
+            children:[
+              {
+                name:'蟒蛇',
+                id:121,
+                children:[
+                  {
+                    name:'小',
+                    id:1211,
+                  },
+                  {
+                    name:'大',
+                    id:1212
+                  },
+                ]
+              },
+              {
+                name:'眼镜蛇',
+                id:122,
+                children:[
+                  {
+                    name:'小',
+                    id:1221,
+                  },
+                  {
+                    name:'大',
+                    id:1222
+                  },
+                ]
+              },
+              {
+                name:'水蛇',
+                id:123,
+                children:[
+                  {
+                    name:'小',
+                    id:1231,
+                  },
+                  {
+                    name:'大',
+                    id:1232
+                  },
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name:'植物',
+        id:2,
+        children:[
+          {
+            name:'树',
+            id:21,
+            children:[
+              {
+                name:'梧桐树',
+                id:211,
+                children:[
+                  {
+                    name:'小',
+                    id:2111,
+                  },
+                  {
+                    name:'大',
+                    id:2112
+                  },
+                ]
+              },
+              {
+                name:'银杏树',
+                id:212,
+                children:[
+                  {
+                    name:'小',
+                    id:2121,
+                  },
+                  {
+                    name:'大',
+                    id:2122
+                  },
+                ]
+              },
+              {
+                name:'杉树',
+                id:213,
+                children:[
+                  {
+                    name:'小',
+                    id:2131,
+                  },
+                  {
+                    name:'大',
+                    id:2132
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            name:'花',
+            id:22,
+            children:[
+              {
+                name:'玫瑰',
+                id:221,
+                children:[
+                  {
+                    name:'小',
+                    id:2211,
+                  },
+                  {
+                    name:'大',
+                    id:2212
+                  },
+                ]
+              },
+              {
+                name:'紫罗兰',
+                id:222,
+                children:[
+                  {
+                    name:'小',
+                    id:2221,
+                  },
+                  {
+                    name:'大',
+                    id:2222
+                  },
+                ]
+              },
+              {
+                name:'菊花',
+                id:223,
+                children:[
+                  {
+                    name:'小',
+                    id:2231,
+                  },
+                  {
+                    name:'大',
+                    id:2232
+                  },
+                ]
+              },
+              {
+                name:'牡丹',
+                id:224,
+                children:[
+                  {
+                    name:'小',
+                    id:2241,
+                  },
+                  {
+                    name:'大',
+                    id:2242
+                  },
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    picker_10_data:[]
   },
   onLoad () {
     setTimeout(() => {
@@ -461,6 +684,27 @@ Page({
   cancleCallBack_09 () {
     this.setData({
       isShow_09: false,
+    })
+  },
+
+
+  showPicker_10: function () {
+    this.setData({
+      isShow_10: true
+    })
+  },
+  sureCallBack_10 (e) {
+    let data = e.detail
+    this.setData({
+      isShow_10: false,
+      picker_10_data: JSON.stringify(e.detail.choosedData),
+      picker_10_index:JSON.stringify(e.detail.choosedIndexArr)
+
+    })
+  },
+  cancleCallBack_10 () {
+    this.setData({
+      isShow_10: false
     })
   },
 })

@@ -117,3 +117,15 @@
 	scrollType="link"
 	listData="{{listData_09}}"
 ></picker>
+
+<button bindtap="showPicker_10">四列联动picker</button>
+<view>选择数据：{{picker_10_data}}</view>
+<view>选择索引：{{picker_10_index}}</view>
+<picker
+	isShowPicker="{{isShow_10}}"
+	keyWordsOfShow="name"
+	bindsure="sureCallBack_10"
+	bindcancle="cancleCallBack_10"
+	scrollType="link"
+	listData="{{listData_10}}"
+></picker>
