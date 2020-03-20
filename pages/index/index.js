@@ -238,6 +238,39 @@ Page({
     ],
     listData_08:citys,
     picker_08_data:[],
+
+    isShow_09: false,
+    listData_09:[
+      {
+        name:'动物',
+        id:1,
+        children:[
+          {
+            name:'鱼',
+            id:11
+          },
+          {
+            name:'蛇',
+            id:12
+          }
+        ]
+      },
+      {
+        name:'植物',
+        id:2,
+        children:[
+          {
+            name:'树',
+            id:21
+          },
+          {
+            name:'花',
+            id:22
+          }
+        ]
+      }
+    ],
+    picker_09_data:[],
   },
   onLoad () {
     setTimeout(() => {
@@ -402,10 +435,32 @@ Page({
       picker_08_index:JSON.stringify(e.detail.choosedIndexArr)
 
     })
+    console.log(JSON.stringify(e.detail))
   },
   cancleCallBack_08 () {
     this.setData({
       isShow_08: false,
+    })
+  },
+
+
+  showPicker_09: function () {
+    this.setData({
+      isShow_09: true
+    })
+  },
+  sureCallBack_09 (e) {
+    let data = e.detail
+    this.setData({
+      isShow_09: false,
+      picker_09_data: JSON.stringify(e.detail.choosedData),
+      picker_09_index:JSON.stringify(e.detail.choosedIndexArr)
+
+    })
+  },
+  cancleCallBack_09 () {
+    this.setData({
+      isShow_09: false,
     })
   },
 })
