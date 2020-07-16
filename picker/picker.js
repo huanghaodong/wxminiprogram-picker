@@ -97,8 +97,8 @@ Component({
       this.properties.isShowPicker = false
       this._closePicker()
     },
-    cancle() {
-      this.triggerEvent('cancle')
+    cancel() {
+      this.triggerEvent('cancel')
       this._closePicker()
     },
     sure() {

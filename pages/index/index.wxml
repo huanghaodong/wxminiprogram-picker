@@ -5,7 +5,7 @@
 <picker
 	isShowPicker="{{isShow_01}}"
 	bindsure="sureCallBack_01"
-	bindcancle="cancleCallBack_01"
+	bindcancel="cancelCallBack_01"
 	scrollType="normal"
 	listData="{{listData_01}}"
 	indicatorStyle="height:47px"
@@ -17,7 +17,7 @@
 <picker
 	isShowPicker="{{isShow_02}}"
 	bindsure="sureCallBack_02"
-	bindcancle="cancleCallBack_02"
+	bindcancel="cancelCallBack_02"
 	scrollType="normal"
 	listData="{{listData_02}}"
 	indicatorStyle="height:80px"
@@ -28,7 +28,7 @@
 	chooseItemTextStyle="color:green;"
 	pickerHeaderStyle="background:#eee;"
 	titleText="自定义标题"
-	cancelText="cancle"
+	cancelText="cancel"
 	sureText="sure"
 ></picker>
 
@@ -38,7 +38,7 @@
 <picker
 	isShowPicker="{{isShow_03}}"
 	bindsure="sureCallBack_03"
-	bindcancle="cancleCallBack_03"
+	bindcancel="cancelCallBack_03"
 	scrollType="normal"
 	listData="{{listData_03}}"
 ></picker>
@@ -50,7 +50,7 @@
 	isShowPicker="{{isShow_04}}"
 	keyWordsOfShow="str"
 	bindsure="sureCallBack_04"
-	bindcancle="cancleCallBack_04"
+	bindcancel="cancelCallBack_04"
 	scrollType="normal"
 	listData="{{listData_04}}"
 ></picker>
@@ -63,7 +63,7 @@
 	keyWordsOfShow="str"
 	defaultPickData="{{defaultPickData_05}}"
 	bindsure="sureCallBack_05"
-	bindcancle="cancleCallBack_05"
+	bindcancel="cancelCallBack_05"
 	scrollType="normal"
 	listData="{{listData_05}}"
 ></picker>
@@ -75,7 +75,7 @@
 	isShowPicker="{{isShow_06}}"
 	keyWordsOfShow="name"
 	bindsure="sureCallBack_06"
-	bindcancle="cancleCallBack_06"
+	bindcancel="cancelCallBack_06"
 	scrollType="link"
 	listData="{{listData_06}}"
 ></picker>
@@ -88,7 +88,7 @@
 	keyWordsOfShow="name"
 	defaultPickData="{{defaultPickData_07}}"
 	bindsure="sureCallBack_07"
-	bindcancle="cancleCallBack_07"
+	bindcancel="cancelCallBack_07"
 	scrollType="link"
 	listData="{{listData_07}}"
 ></picker>
@@ -101,7 +101,7 @@
 	keyWordsOfShow="name"
 	defaultPickData="{{defaultPickData_08}}"
 	bindsure="sureCallBack_08"
-	bindcancle="cancleCallBack_08"
+	bindcancel="cancelCallBack_08"
 	scrollType="link"
 	listData="{{listData_08}}"
 ></picker>
@@ -113,7 +113,7 @@
 	isShowPicker="{{isShow_09}}"
 	keyWordsOfShow="name"
 	bindsure="sureCallBack_09"
-	bindcancle="cancleCallBack_09"
+	bindcancel="cancelCallBack_09"
 	scrollType="link"
 	listData="{{listData_09}}"
 ></picker>
@@ -125,7 +125,7 @@
 	isShowPicker="{{isShow_10}}"
 	keyWordsOfShow="name"
 	bindsure="sureCallBack_10"
-	bindcancle="cancleCallBack_10"
+	bindcancel="cancelCallBack_10"
 	scrollType="link"
 	listData="{{listData_10}}"
 ></picker>
