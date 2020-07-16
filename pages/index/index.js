@@ -517,7 +517,7 @@ Page({
       picker_01_index:JSON.stringify(e.detail.choosedIndexArr)
     })
   },
-  cancleCallBack_01 () {
+  cancelCallBack_01 () {
     this.setData({
       isShow_01: false,
     })
@@ -537,7 +537,7 @@ Page({
       picker_02_index:JSON.stringify(e.detail.choosedIndexArr)
     })
   },
-  cancleCallBack_02 () {
+  cancelCallBack_02 () {
     this.setData({
       isShow_02: false,
     })
@@ -557,7 +557,7 @@ Page({
       picker_03_index:JSON.stringify(e.detail.choosedIndexArr)
     })
   },
-  cancleCallBack_03 () {
+  cancelCallBack_03 () {
     this.setData({
       isShow_03: false,
     })
@@ -577,7 +577,7 @@ Page({
       picker_04_index:JSON.stringify(e.detail.choosedIndexArr)
     })
   },
-  cancleCallBack_04 () {
+  cancelCallBack_04 () {
     this.setData({
       isShow_04: false,
     })
@@ -598,7 +598,7 @@ Page({
 
     })
   },
-  cancleCallBack_05 () {
+  cancelCallBack_05 () {
     this.setData({
       isShow_05: false,
     })
@@ -619,7 +619,7 @@ Page({
 
     })
   },
-  cancleCallBack_06 () {
+  cancelCallBack_06 () {
     this.setData({
       isShow_06: false,
     })
@@ -639,7 +639,7 @@ Page({
 
     })
   },
-  cancleCallBack_07 () {
+  cancelCallBack_07 () {
     this.setData({
       isShow_07: false,
     })
@@ -660,7 +660,7 @@ Page({
     })
     console.log(JSON.stringify(e.detail))
   },
-  cancleCallBack_08 () {
+  cancelCallBack_08 () {
     this.setData({
       isShow_08: false,
     })
@@ -681,7 +681,7 @@ Page({
 
     })
   },
-  cancleCallBack_09 () {
+  cancelCallBack_09 () {
     this.setData({
       isShow_09: false,
     })
@@ -702,7 +702,7 @@ Page({
 
     })
   },
-  cancleCallBack_10 () {
+  cancelCallBack_10 () {
     this.setData({
       isShow_10: false
     })

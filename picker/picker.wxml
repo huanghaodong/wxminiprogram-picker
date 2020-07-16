@@ -3,7 +3,7 @@
 	<!--<view class="modal" bindtap="tapModal"></view>-->
 	<view class="picker">
 		<view class="picker-header" style="{{pickerHeaderStyle}}">
-			<view bindtap="cancle" >
+			<view bindtap="cancel" >
 				<text style="{{cancelStyle}}">{{cancelText}}</text>
 			</view>
 			<text style="{{titleStyle}}">{{titleText}}</text>

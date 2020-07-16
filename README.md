@@ -27,7 +27,7 @@
 <picker
 	isShowPicker="{{isShow_02}}"
 	bind:sure="sureCallBack_02"
-	bind:cancle="cancleCallBack_02"
+	bind:cancel="cancelCallBack_02"
 	scrollType="normal"
 	listData="{{listData_02}}"
 	indicatorStyle="height:80px"
@@ -38,7 +38,7 @@
 	chooseItemTextStyle="color:green;"
 	pickerHeaderStyle="background:#eee;"
 	titleText="自定义标题"
-	cancelText="cancle"
+	cancelText="cancel"
 	sureText="sure"
 ></picker>
 
@@ -49,7 +49,7 @@
 
 | name | type | required | default | Description |
 | ------ | ------ | ------ | ------ |------ |
-| isShowPicker | Boolean | ✓ | false | 显示隐藏picker，需要在bindsure和bindcancle中手动设为false |
+| isShowPicker | Boolean | ✓ | false | 显示隐藏picker，需要在bindsure和bindcancel中手动设为false |
 | scrollType | String | ✗ | 'normal' | picker类型，'normal':非联动picker 'link':联动picker |
 | listData | Array | ✓ | [] | picker数据源,是一个数组，scrollType='normal'时，数组成员也是数组，数组成员数量就是picker列数;scrollType='link'时，listData格式需为固定格式 |
 | keyWordsOfShow | String | ✗ | 'name' | 当listData的的每一个成员，是由对象组成的数组时，keyWordsOfShow作为对象的key，其value用于显示；或者当picker='link'时，供显示的key |
@@ -65,13 +65,13 @@
 | cancelText | String | ✗ | '' | 取消按钮文案 |
 | sureText | String | ✗ | '' | 确定按钮文案 |
 | bindsure | EventHandle | ✗ | 无 | 点击确定触发的事件，event.detail = {choosedData, choosedIndexArr} ,choosedData为选中项的数据, choosedIndexArr为选中项的索引数组；当scrollType='link'时choosedIndexArr无意义。|
-| bindcancle | EventHandle | ✗ | 无 | 点击取消触发的事件 |
+| bindcancel | EventHandle | ✗ | 无 | 点击取消触发的事件 |
 
 
 ## 注意
  - **模态框无法覆盖原生组件（参考[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)），所以如果页面有原生组件，可以在isShowPicker为true设置原生组件display:none**。
  - 在使用该组件的page页面中，禁止出现'.wrapper'类名，否则会出现样式问题，如果用到请换个名字。（ 我也觉得很奇怪 ）
- - 必须在bindsure和bindcancle中将isShowPicker设为false。
+ - 必须在bindsure和bindcancel中将isShowPicker设为false。
  - scrollType='normal'时，listData数据结构代码如下；当第二维数组的成员为对象时，需指定用于显示的key(通过keyWordsOfShow属性)，默认为'name'。若要设置默认选中，设置 defaultPickData=[第一选中的列索引,第二选中的列索引,第三选中的列索引,...]，如[1,2,1]
  
  ```js
@@ -114,4 +114,4 @@
  ]
 ```
 
-## 如果觉得有用，请给个start，谢谢
+## 如果觉得有用，请给个star，谢谢
